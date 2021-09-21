@@ -1,30 +1,131 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+    <div class="top-bar-container">
+      <div class="top-bar-content">
+        <div class="top-bar-img">
+          <img
+            src="https://us.123rf.com/450wm/mialima/mialima1603/mialima160300025/55096766-hombre-icono-de-usuario-aislado-en-un-fondo-blanco-avatar-cuenta-para-la-web-foto-de-perfil-de-usuar.jpg?ver=6"
+            alt=""
+          />
+        </div>
+        <div class="top-bar-center">
+          <i class="bx bx-current-location"></i>
+          San Salvador
+          <!-- <i class="bx bxs-chevron-down"></i> -->
+        </div>
+        <div class="top-bar-icons">
+          <div class="notifi">
+            <div class="circle"></div>
+            <i class="bx bx-bell bx-sm"></i>
+          </div>
+          <div class="config">
+            <i class="bx bx-cog bx-sm"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-container">
+      <div class="nav-content">
+        <router-link to="/"><i class="bx-sm bx bx-home"></i></router-link>
+        <router-link to="/about"><i class="bx-sm bx bx-heart"></i></router-link>
+        <router-link to="/home"
+          ><i class="bx-sm bx bx-location-plus"></i
+        ></router-link>
+        <router-link to="/home"
+          ><i class="bx-sm bx bx-message-detail"></i
+        ></router-link>
+      </div>
+    </div>
+    <router-view />
   </div>
-  <router-view/>
 </template>
 
-<style>
+<style scoped>
+@import (css)
+  url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+:root {
+  --primary: 51, 191, 200;
+  --text-primary: 20, 54, 86;
+  --text-gray: 138, 155, 171;
+  --title-bold: 500;
+}
+.top-bar-container {
+  display: flex;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 5px 10px -2px rgba(74, 54, 251, 0.2);
+  z-index: 3001;
+}
+.top-bar-content {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar-center {
+  margin-right: -15px;
+}
+.top-bar-icons {
+  display: flex;
+}
+.config i {
+  margin-left: 15px;
+}
+.notifi {
+  position: relative;
+}
+.circle {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 25px;
+  right: 0;
+  top: 0;
+  background: #ed6c6c;
+}
+.top-bar-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.nav-container {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 4000;
+  background-color: #fff;
+}
+.nav-content {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+a {
+  color: rgba(95, 100, 111);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+a.router-link-exact-active {
+  color: rgba(69, 208, 215);
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="top-bar-container">
+    <div v-if="!$store.state.isView" class="top-bar-container">
       <div class="top-bar-content">
         <div class="top-bar-img">
           <img
@@ -11,7 +11,7 @@
         <div class="top-bar-center">
           <i class="bx bx-current-location"></i>
           San Salvador
-          <!-- <i class="bx bxs-chevron-down"></i> -->
+          <i class="bx bxs-chevron-down"></i>
         </div>
         <div class="top-bar-icons">
           <div class="notifi">
@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-    <div class="nav-container">
+    <div v-if="!$store.state.isView"  class="nav-container">
       <div class="nav-content">
         <router-link to="/"><i class="bx-sm bx bx-home"></i></router-link>
         <router-link to="/about"><i class="bx-sm bx bx-heart"></i></router-link>
@@ -120,7 +120,7 @@ a {
 }
 
 a.router-link-exact-active {
-  color: rgba(69, 208, 215);
+  color: rgba(108, 200, 117);
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

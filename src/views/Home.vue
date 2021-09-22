@@ -23,6 +23,7 @@
       </div>
     </div>
     <CardApp
+     @click="redirigir"
       style="margin-top: 20px"
       title="apartamento"
       imgUser="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
@@ -45,6 +46,11 @@ export default {
   components: {
     CardApp,
   },
+  methods: {
+    redirigir(){
+      this.$router.push('/detalle')
+    }
+  }
 };
 </script>
 
@@ -83,7 +89,7 @@ input {
   position: absolute;
   right: 0;
   align-items: center;
-  color: rgba(69, 208, 215);
+  color: rgb(108, 200, 117);
   font-size: 1.3rem;
 }
 
@@ -100,6 +106,6 @@ input {
 }
 .selected{
   color: white;
-background-color: rgba(69, 208, 215);
+background-color: rgb(108, 200, 117);
 }
 </style>

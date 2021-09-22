@@ -178,7 +178,7 @@ button {
 }
 
 i {
-  color: rgba(69, 208, 215);
+  color: rgb(108, 200, 117);
   margin: 3px;
 }
 .footer-card-right {

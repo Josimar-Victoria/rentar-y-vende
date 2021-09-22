@@ -1,5 +1,7 @@
 # reat-app
+
 <img src='https://github.com/Josimar-Victoria/rentar-y-vende/blob/main/Captura%20de%20pantalla%20de%202021-09-22%2003-16-24.png?raw=true' alt='img'/>
+<img src='https://github.com/Josimar-Victoria/rentar-y-vende/blob/main/Captura%20de%20pantalla%20de%202021-09-22%2003-16-34.png?raw=true' alt='img'/>
 ## Project setup
 ```
 npm install
